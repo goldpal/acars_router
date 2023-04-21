@@ -1,0 +1,23 @@
+[package]
+name = "acars_router"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+description.workspace = true
+documentation.workspace = true
+homepage.workspace = true
+repository.workspace = true
+readme.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+log = "0.4.17"
+tokio = { version = "1.26.0", features = ["full", "tracing"] }
+chrono = "0.4.23"
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.93"
+failure = "0.1.8"
+acars_config = { path = "../../libraries/acars_config" }
+acars_logging = { path = "../../libraries/acars_logging" }
+acars_connection_manager = { path = "../../libraries/acars_connection_manager" }
